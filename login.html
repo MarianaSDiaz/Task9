@@ -10,29 +10,33 @@
 <body>
     <h1>Log in!</h1>
     <form action="">
-        <div class="elements" >
+        <div id="email" class="elements" >
             <label for="email">
                 Email
             </label>
-            <input type="email" name="email" id="email" class="input">
-        </div>
-        <div class="elements">
+            <input type="email" name="email" id="iemail" class="input">
+        </div> 
+        <div id="passw" class="elements">
             <label for="passw">
                 Password
             </label>
-            <input type="password" name="passw" id="passw" class="input">
+            <input type="password" name="passw" id="ipassw" class="input">
         </div>
         <div id="buttons">
             <input type="submit" value="Log in" class="button">
-        </div>
-        <div id="link">
-            <span>
-                You are not registered?
-                <a href="https://marianasdiaz.github.io/Task9/register">
-                    Click here to register
-                </a>
-            </span>
-        </div>
+        </div>  
     </form>
+    <div id="link">
+        <span>
+            You are not registered?
+            <a href="https://marianasdiaz.github.io/Task9/register">
+                Click here to register
+            </a>
+        </span>
+    </div>
+    <div id="log-alert" class="hidden validationContent">
+
+    </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>

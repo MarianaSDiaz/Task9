@@ -56,3 +56,9 @@ input{
 #link a:hover{
     color: rgb(139, 10, 165);
 }
+.hidden{
+    display: flex;
+    overflow: hidden;
+    color: rgb(0, 174, 255);
+    justify-content: center;
+}
