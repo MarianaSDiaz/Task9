@@ -11,36 +11,36 @@
     <h1>Register now!</h1>
     <form action="">
         <div class="elements">
-            <div class="elem">
+            <div class="elem fname">
                 <label for="fname">
                     Full name
                 </label>
-                <input id="fname" type="text" required>
+                <input id="fname" type="text" name="fname" required>
             </div>
-            <div class="elem">
+            <div class="elem email">
                 <label for="email">
                     Email
                 </label>
-                <input id="email" type="text" required>
+                <input id="email" type="email" name="email" required>
             </div>
         </div>
         <div class="elements">
-            <div class="elem">
+            <div class="elem passw">
                 <label for="passw">
                     Password
                 </label>
-                <input id="passw" type="password" required>
+                <input id="passw" type="password" name="passw" required>
             </div>
-            <div class="elem">
+            <div class="elem rpassw">
                 <label for="rpassw">
                     Repeat password
                 </label>
-                <input id="rpassw" type="password" required>
+                <input id="rpassw" type="password" name="rpassw" required>
             </div>
         </div>
         <div id="buttons">
-            <input class="button" type="submit" value="Submit">
-            <input class="button" type="button" value="Reset">
+            <input class="button button1" type="submit" value="Submit" name="button1">
+            <input class="button button2" type="button" value="Reset" name="button2">
         </div>
     </form>
     <div id="link">
