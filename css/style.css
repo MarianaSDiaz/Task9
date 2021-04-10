@@ -61,3 +61,8 @@ input{
     color: rgb(0, 174, 255);
     justify-content: center;
 }
+.error{
+    display: none;
+    color: rgb(129, 0, 0);
+    font-weight: 700;
+}

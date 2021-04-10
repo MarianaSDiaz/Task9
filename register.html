@@ -11,17 +11,23 @@
     <h1>Register now!</h1>
     <form action="">
         <div class="elements">
-            <div class="elem fname">
+            <div class="elem firstname">
                 <label for="fname">
                     Full name
                 </label>
                 <input id="fname" type="text" name="fname" required>
+                <span class="error">
+                    The name must contain at least 6 letters and a space
+                </span>
             </div>
-            <div class="elem email">
+            <div class="elem demail">
                 <label for="email">
                     Email
                 </label>
                 <input id="email" type="email" name="email" required>
+                <span class="error">
+                    The email must contain a valid format
+                </span>
             </div>
         </div>
         <div class="elements">
@@ -30,12 +36,18 @@
                     Password
                 </label>
                 <input id="passw" type="password" name="passw" required>
+                <span class="error">
+                    The password must contain at least 8 characters, consisting of letters and numbers
+                </span>
             </div>
             <div class="elem rpassw">
                 <label for="rpassw">
                     Repeat password
                 </label>
                 <input id="rpassw" type="password" name="rpassw" required>
+                <span class="error">
+                    Passwords do not match
+                </span>
             </div>
         </div>
         <div id="buttons">
@@ -55,5 +67,6 @@
 
     </div>
     <script src="./js/register.js"></script>
+    <script src="./js/validRegister.js"></script>
 </body>
 </html>

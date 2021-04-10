@@ -10,17 +10,23 @@
 <body>
     <h1>Log in!</h1>
     <form action="">
-        <div id="email" class="elements" >
+        <div id="demail" class="elements" >
             <label for="email">
                 Email
             </label>
-            <input type="email" name="email" id="iemail" class="input" required>
+            <input type="email" name="email" id="email" class="input" required>
+            <span class="error">
+                The email is invalid
+            </span>
         </div> 
-        <div id="passw" class="elements">
+        <div id="dpassw" class="elements">
             <label for="password">
                 Password
             </label>
-            <input type="password" name="passw" id="ipassw" class="input" required>
+            <input type="password" name="passw" id="password" class="input" required>
+            <span class="error">
+                The password must contain at least 8 characters, consisting of letters and numbers
+            </span>
         </div>
         <div id="buttons" class="elements">
             <input type="submit" value="Log in" class="button">
@@ -37,6 +43,7 @@
     <div id="log-alert" class="hidden validationContent">
 
     </div>
-    <script src="./js/login.js"></script>
+    <!-- <script src="./js/login.js"></script> -->
+    <script src="./js/validLogin.js"></script>
 </body>
 </html>
