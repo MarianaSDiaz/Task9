@@ -15,7 +15,7 @@ function formCheck() {
     // if (formElements.length != 3) {
     //     errorArray.push("form is not complete");
     // }; 
-    // console.log(errorArray);
+    console.log(errorArray);
 };
 function checkLabelEmail() {
     const labelEmail = document.querySelector(['label[for="email"]']);
