@@ -1,4 +1,5 @@
 let errorArray = [];
+let hidden = document.getElementsByClassName("hidden");
 
 function formCheck() {
     let elements = ["fname", "email", "passw", "rpassw", "button1", "button2"];
@@ -93,7 +94,7 @@ function setValidationsResult() {
     if (errorArray.length === 0) {
         validationsResults.innerHTML += '<p>Every validation has passed</p>';
     } else {
-        for (let i = 0; i < errorsArray.length; i++) {
+        for (let i = 0; i < errorArray.length; i++) {
             validationsResults.innerHTML += '<p>' + errorArray[i] + '</p>';
         }
     }
