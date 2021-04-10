@@ -5,7 +5,7 @@ function formCheck() {
     let elements = ["email", "passw", "buttons"];
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
-        if (!document.getElementById(element)) {
+        if (!document.getElementsByClassName("elements")) {
             errorArray.push("Element " + element + " does not exists");
             hidden.append("Element " + element + " does not exists");
         }
