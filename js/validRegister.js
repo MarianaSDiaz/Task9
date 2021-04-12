@@ -3,6 +3,7 @@ let fname = document.getElementById("fname");
 let email = document.getElementById("email");
 let passw = document.getElementById("passw");
 let rpassw = document.getElementById("rpassw");
+let submit = document.getElementsByClassName("submit");
 
 fname.onblur = function() {
     validateFname(fname.value);
@@ -69,6 +70,17 @@ function changeErrorStyle(index) {
 };
 function hideError(index) {
      error[index].style.display = 'none'
+};
+
+async function getUsers() {
+    fetch("https://jsonplaceholder.typicode.com/users?email=randomEmail@gmail.com")
+    .then(Response => Response.json())
+    .then(data => console.log(data))
+    .catch()
+};
+
+submit.onclick = function(){
+    getUsers();
 };
 
 
