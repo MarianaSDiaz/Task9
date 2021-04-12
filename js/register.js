@@ -85,7 +85,7 @@ function checkSubmitFormBtn() {
 };
 
 function setValidationsResult() {
-    const validationsResults = document.getElementsByClassName("validationContent");
+    const validationsResults = document.getElementsByClassName("validationContent")[0];
     if (errorArray.length === 0) {
         validationsResults.innerHTML += '<p>Every validation has passed</p>';
     } else {

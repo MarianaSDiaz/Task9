@@ -44,7 +44,7 @@ function checkLoginButton() {
 };
 
 function check(){
-    const ValidationsResults = document.getElementsByClassName("validationContent");
+    const ValidationsResults = document.getElementsByClassName("validationContent")[0];
     if(errorArray.length === 0) {
         ValidationsResults.innerHTML += '<p>Every validation has passed</p>';
     } else {
