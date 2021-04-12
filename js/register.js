@@ -1,15 +1,10 @@
 let errorArray = [];
-let hidden = document.getElementsByClassName("hidden");
 
 function formCheck() {
-    let elements = ["fname", "email", "passw", "rpassw", "button1", "button2"];
-    for (let i = 0; i < elements.length; i++) {
-        const element = elements[i];
-        if (!document.getElementsByClassName("elem")) {
-            errorArray.push("Element " + element + " does not exists");
-            hidden.append("Element " + element + " does not exists");
-        }
-    }
+    const formElement = document.getElementsByTagName("form")[0];
+    if (!formElement) {
+        errorArray.push("Form does not exist");
+    };
 };
 
 function checkLabelFullName() {
