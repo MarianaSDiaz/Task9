@@ -60,3 +60,34 @@ checkInputEmail();
 checkLabelPassword();
 checkInputPassword();
 check();
+
+
+document.getElementsByTagName('form')[0].addEventListener('submit', (e) => {
+    e.preventDefault();
+    showValues();
+    sendRequest();
+});
+
+
+function showValues() {
+    const emailValue = document.getElementById('email').value;
+    const passwValue = document.getElementById('password').value;
+    const valuesToShow = document.getElementsByClassName('validationContent')[0];
+    valuesToShow.innerHTML =
+        `<ul>
+            <li>Email: ${emailValue}</li>
+            <li>Password: ${passwValue}</li>
+        </ul>`;
+};
+
+function sendRequest() {
+    const emailvalue = document.getElementById('email').value;
+    if(errorArray.length === 0) {
+        fetch(`https://jsonplaceholder.typicode.com/users?email=${emailvalue}`, {
+            method: 'GET'
+        })
+        .then((e) => console.log(e));   
+    } else {
+        console.log('Something is missing')
+    }
+};

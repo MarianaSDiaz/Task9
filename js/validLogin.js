@@ -1,7 +1,7 @@
 const error = document.getElementsByClassName("error");
 const email = document.getElementById("email");
 const passw = document.getElementById("password");
-const submit = document.getElementsByClassName("submit");
+const submit = document.getElementsByClassName("submit")[0];
 
 email.onblur = function() {
     validateEmail(email.value);
@@ -45,13 +45,4 @@ function hideError(index) {
      error[index].style.display = 'none'
 };
 
-async function getUsers() {
-    fetch("https://jsonplaceholder.typicode.com/users?email=randomEmail@gmail.com")
-    .then(Response => Response.json())
-    .then(data => console.log(data))
-    .catch()
-};
 
-submit.onclick = function(){
-    getUsers();
-};
