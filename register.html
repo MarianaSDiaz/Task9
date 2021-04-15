@@ -16,7 +16,7 @@
                     Full name
                 </label>
                 <input id="fname" type="text" name="fname" required>
-                <span class="error">
+                <span id="fnameError" class="hideError">
                     The name must contain at least 6 letters and a space
                 </span>
             </div>
@@ -25,7 +25,7 @@
                     Email
                 </label>
                 <input id="email" type="email" name="email" required>
-                <span class="error">
+                <span id="emailError" class="hideError">
                     The email must contain a valid format
                 </span>
             </div>
@@ -36,7 +36,7 @@
                     Password
                 </label>
                 <input id="passw" type="password" name="passw" required>
-                <span class="error">
+                <span id="passwError" class="hideError">
                     The password must contain at least 8 characters, consisting of letters and numbers
                 </span>
             </div>
@@ -45,7 +45,7 @@
                     Repeat password
                 </label>
                 <input id="rpassw" type="password" name="rpassw" required>
-                <span class="error">
+                <span id="rpasswError" class="hideError">
                     Passwords do not match
                 </span>
             </div>

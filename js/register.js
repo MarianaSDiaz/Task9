@@ -64,23 +64,16 @@ function checkInputRepeatPassword() {
 };
 
 function checkSubmitButton() {
-    const submitButton = document.querySelector(['button[type="submit"]']);
+    const submitButton = document.querySelector(['input[type="submit"]']);
     if (!submitButton) {
         errorArray.push('Missing submit button')
     }
 };
 
 function checkResetButton() {
-    const checkResetButton = document.querySelector(['button[type="reset"]']);
+    const checkResetButton = document.querySelector(['input[type="button"]']);
     if (!checkResetButton) {
         errorArray.push('Missing reset button');
-    }
-};
-
-function checkSubmitFormBtn() {
-    const checkSubmitForm = document.querySelector(['button[type="button"]']);
-    if (!checkSubmitForm) {
-        errorArray.push('Missing submit button');
     }
 };
 
@@ -108,13 +101,11 @@ checkSubmitButton();
 checkResetButton();
 setValidationsResult();
 
-
 document.getElementsByTagName('form')[0].addEventListener('submit', (e) => {
     e.preventDefault();
     showValues();
     sendRequest();
 });
-
 
 function showValues() {
     const fnameValue = document.getElementById('fname').value
