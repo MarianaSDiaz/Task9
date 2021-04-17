@@ -73,15 +73,43 @@ function hideError(id) {
     errorElement.className = "hideError";
 };
 
-async function getUsers() {
-    fetch("https://jsonplaceholder.typicode.com/users?email=randomEmail@gmail.com")
-    .then(Response => Response.json())
-    .then(data => console.log(data))
-    .catch()
+document.getElementsByTagName('form')[0].addEventListener('submit', (e) => {
+    e.preventDefault();
+    showValues();
+    handleRegister();
+});
+
+function showValues() {
+    const fnameValue = document.getElementById('fname').value
+    const emailValue = document.getElementById('email').value;
+    const passwValue = document.getElementById('passw').value;
+    const rpasswValue = document.getElementById('rpassw').value;
+    const valuesToShow = document.getElementsByClassName('validationContent')[0];
+    valuesToShow.innerHTML =
+        `<ul>
+            <li>Full Name: ${fnameValue}</li>
+            <li>Email: ${emailValue}</li>
+            <li>Password: ${passwValue}</li>
+            <li>Repeat Password: ${rpasswValue}</li>
+        </ul>`;
 };
 
-submit.onclick = function(){
-    getUsers();
+function handleRegister() {
+    const fnameValue = document.getElementById("fname").value;
+    const emailValue = document.getElementById("email").value;
+    const passwordValue = document.getElementById("passw").value;
+    fetch(`http://localhost:4000/register`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            fname: fnameValue,
+            email: emailValue,
+            password: passwordValue
+        })
+    })
+    .then(res => res.json())
+    .then(response => console.log('Success:', response));
 };
-
 
